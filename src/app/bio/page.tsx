@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function BioPage() {
   return (
-    <div>
+    <main>
       <CloseButton />
       <div>
         <h1>Biography</h1>
@@ -62,6 +62,6 @@ export default function BioPage() {
           Português
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

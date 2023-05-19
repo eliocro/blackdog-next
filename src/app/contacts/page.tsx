@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function ContactsPage() {
   return (
-    <div>
+    <main>
       <CloseButton />
       <div>
         <h1>Contacts</h1>
@@ -23,6 +23,6 @@ export default function ContactsPage() {
           </a>
         </p>
       </div>
-    </div>
+    </main>
   );
 }

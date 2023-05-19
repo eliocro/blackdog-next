@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import Footer from '@/components/layout/Footer';
 import MainMenu from '@/components/layout/MainMenu';
 import MainLogo from '@/components/layout/MainLogo';
@@ -18,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`${styles.wrapper} container`}>
+        <div className={clsx(styles.wrapper, 'container')}>
           <header>
             <MainLogo />
             <MainMenu />
           </header>
-          <main>{children}</main>
+          <div>{children}</div>
         </div>
         <Footer />
       </body>
