@@ -1,0 +1,27 @@
+$break-tablet: 768px;
+$break-desktop: 1024px;
+$break-wide: 1400px;
+
+@mixin mobile {
+  @media screen and (max-width: ($break-tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $break-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $break-desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media screen and (min-width: $break-wide) {
+    @content;
+  }
+}
