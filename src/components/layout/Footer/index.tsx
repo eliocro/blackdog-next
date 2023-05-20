@@ -25,29 +25,33 @@ export default function Footer() {
 
 const socialLinks = [
   {
+    name: 'instagram',
+    href: 'https://www.instagram.com/blackdog.bluesband',
+    src: '/images/social/instagram.svg',
+  },
+  {
     name: 'facebook',
     href: 'https://www.facebook.com/blackdogbluesband',
-    src: '/images/social/facebook.png',
+    src: '/images/social/facebook.svg',
   },
   {
     name: 'youtube',
     href: 'https://www.youtube.com/user/blackdogbluesband/',
-    src: '/images/social/youtube.png',
-  },
-
-  {
-    name: 'flickr',
-    href: 'https://www.flickr.com/photos/84277882@N05/',
-    src: '/images/social/flickr.png',
+    src: '/images/social/youtube.svg',
   },
   {
     name: 'soundcloud',
     href: 'https://www.soundcloud.com/blackdogbluesband',
-    src: '/images/social/soundcloud.png',
+    src: '/images/social/soundcloud.svg',
+  },
+  {
+    name: 'flickr',
+    href: 'https://www.flickr.com/photos/84277882@N05/',
+    src: '/images/social/flickr.svg',
   },
   {
     name: 'myspace',
     href: 'https://www.myspace.com/blackdogbluesband',
-    src: '/images/social/myspace.png',
+    src: '/images/social/myspace.svg',
   },
 ];
