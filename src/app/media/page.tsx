@@ -18,7 +18,7 @@ export default function MediaPage() {
         <h1 className="visually-hidden">Media</h1>
         <div className={styles.block}>
           <h2>Photos</h2>
-          <FlickrGallery />
+          <FlickrGallery count={15} />
           <Button
             href="https://www.flickr.com/photos/84277882@N05/"
             target="_blank"

@@ -1,0 +1,27 @@
+@use '@/styles/breakpoints.scss' as breakpoints;
+
+.block {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  :global(.button) {
+    margin-top: 1rem;
+    margin-left: auto;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.flex {
+  @include breakpoints.desktop {
+    display: flex;
+    gap: 1.5rem;
+    > div {
+      width: 50%;
+    }
+  }
+}

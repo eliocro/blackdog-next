@@ -7,10 +7,10 @@ import useFlickrPhotos from '@/hooks/useFlickrPhotos';
 import styles from './gallery.module.scss';
 
 type Props = {
-  count?: number;
+  count: number;
 };
 
-export default function FlickrGallery({ count = 15 }: Props) {
+export default function FlickrGallery({ count }: Props) {
   const { photos } = useFlickrPhotos();
   return (
     <div className={styles.gallery}>
