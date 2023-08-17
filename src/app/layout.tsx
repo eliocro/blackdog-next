@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Background />
-        <div className={clsx(styles.wrapper, 'container')}>
+        <div className={clsx(styles.container, 'container')}>
           <header>
             <MainLogo />
             <MainMenu />
