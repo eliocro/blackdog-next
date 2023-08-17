@@ -1,7 +1,8 @@
+import { Metadata } from 'next';
 import CloseButton from '@/components/layout/CloseButton';
 
-export const metadata = {
-  title: 'Contacts | Black Dog Blues Band',
+export const metadata: Metadata = {
+  title: 'Contacts',
 };
 
 export default function ContactsPage() {

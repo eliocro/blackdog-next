@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import clsx from 'clsx';
 
 import Background from '@/components/layout/Background';
@@ -8,8 +9,11 @@ import MainLogo from '@/components/layout/MainLogo';
 import '@/styles/globals.scss';
 import styles from './layout.module.scss';
 
-export const metadata = {
-  title: 'Back Dog Blues Band',
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Black Dog Blues Band',
+    template: '%s | Black Dog Blues Band',
+  },
   description: 'Black Dog Blues Band, a blues band from Madeira, Portugal.',
 };
 
@@ -34,3 +38,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const revalidate = 60 * 60;

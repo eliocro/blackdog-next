@@ -1,11 +1,12 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import CloseButton from '@/components/layout/CloseButton';
 
 import styles from './page.module.scss';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Biography | Black Dog Blues Band',
+export const metadata: Metadata = {
+  title: 'Biography',
 };
 
 export default function BioPage() {

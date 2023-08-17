@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 
 import Button from '@/components/Button';
@@ -6,8 +7,8 @@ import CloseButton from '@/components/layout/CloseButton';
 
 import styles from './page.module.scss';
 
-export const metadata = {
-  title: 'Home | Black Dog Blues Band',
+export const metadata: Metadata = {
+  title: 'Home',
 };
 
 export default function HomePage() {
