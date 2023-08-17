@@ -16,13 +16,11 @@
   }
 
   @include breakpoints.mobile {
+    grid-template-columns: 250px calc(100vw - 3rem);
     transition: margin-left 0.5s ease-in-out;
 
-    &:has(main) {
+    *[data-pathname] + & {
       margin-left: -250px;
-    }
-    > div {
-      width: calc(100vw - 3rem);
     }
   }
 
