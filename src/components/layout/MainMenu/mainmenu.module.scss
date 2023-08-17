@@ -1,0 +1,35 @@
+.menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 0.375rem;
+    }
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    padding: 0.75rem 3rem 0.75rem 1.25rem;
+
+    // border: 1px solid var(--color-black);
+    color: var(--color-white);
+    background-color: var(--color-black);
+
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:global(.is-active),
+    &:hover,
+    &:focus-visible {
+      color: var(--color-black);
+      background-color: var(--color-white);
+    }
+  }
+}

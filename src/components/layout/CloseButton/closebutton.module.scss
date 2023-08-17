@@ -1,0 +1,23 @@
+.button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  &:before,
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: calc(1rem - 1px);
+    height: 2rem;
+    width: 2px;
+    background-color: var(--color-black);
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

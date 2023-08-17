@@ -1,0 +1,52 @@
+@use '@/styles/breakpoints.scss' as breakpoints;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @include breakpoints.tablet {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.67);
+
+  :global(.container) {
+    @include breakpoints.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  @include breakpoints.mobile {
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+  }
+  @include breakpoints.tablet {
+    gap: 0.5rem;
+  }
+
+  a,
+  img {
+    display: block;
+  }
+}
+
+.copy {
+  @include breakpoints.mobile {
+    text-align: center;
+  }
+
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}

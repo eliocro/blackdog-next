@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+
+  border: none;
+  color: var(--color-white);
+  background: var(--color-black);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-black);
+    background: var(--color-white);
+  }
+
+  font-size: 0.875em;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
