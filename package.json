@@ -10,17 +10,17 @@
     "check-types": "tsc"
   },
   "dependencies": {
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.31",
-    "@types/react-dom": "18.0.11",
-    "clsx": "^1.2.1",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "clsx": "^2.0.0",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.17",
+    "next": "13.4.17",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.62.1",
-    "swr": "^2.1.5",
-    "typescript": "5.0.2"
+    "sass": "^1.65.1",
+    "swr": "^2.2.1",
+    "typescript": "5.1.6"
   }
 }
