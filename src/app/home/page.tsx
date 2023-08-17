@@ -20,7 +20,13 @@ export default function HomePage() {
           <div className={styles.flex}>
             <div>
               <h2>Biography</h2>
-              <Image src="/images/bio_2.jpg" width={298} height={147} alt="" />
+              <Image
+                src="/images/insta-a.jpg"
+                width={327}
+                height={206}
+                quality={85}
+                alt=""
+              />
               <p>
                 Black Dog Blues Band was born in Sao Paulo (Brazil) in 1989. Its
                 founder, Daniel Henriques, met Magic Slim, Albert Collins, Buddy

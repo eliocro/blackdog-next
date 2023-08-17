@@ -16,9 +16,10 @@ export default function BioPage() {
         <h1>Biography</h1>
         <Image
           className={styles.image}
-          src="/images/bio_1.jpg"
-          width={250}
-          height={322}
+          src="/images/insta-b.jpg"
+          width={256}
+          height={320}
+          quality={85}
           alt=""
         />
         <p>

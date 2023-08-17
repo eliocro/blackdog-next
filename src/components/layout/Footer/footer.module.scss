@@ -14,7 +14,7 @@
   }
 
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: rgba(0, 0, 0, 0.67);
 
   :global(.container) {
     @include breakpoints.tablet {
