@@ -17,25 +17,6 @@ export default function MediaPage() {
       <div>
         <h1 className="visually-hidden">Media</h1>
         <div className={styles.block}>
-          <h2>Photos</h2>
-          <FlickrGallery count={15} />
-          <Button
-            href="https://www.flickr.com/photos/84277882@N05/"
-            target="_blank"
-            endIcon={
-              <Image
-                src="/images/social-button/flickr.svg"
-                alt=""
-                width={24}
-                height={24}
-              />
-            }
-            arial-label="More on Flickr"
-          >
-            More on
-          </Button>
-        </div>
-        <div className={styles.block}>
           <h2>Videos</h2>
           <iframe
             width="100%"
@@ -79,6 +60,25 @@ export default function MediaPage() {
               />
             }
             arial-label="More on Soundcloud"
+          >
+            More on
+          </Button>
+        </div>
+        <div className={styles.block}>
+          <h2>Photos</h2>
+          <FlickrGallery count={15} />
+          <Button
+            href="https://www.flickr.com/photos/84277882@N05/"
+            target="_blank"
+            endIcon={
+              <Image
+                src="/images/social-button/flickr.svg"
+                alt=""
+                width={24}
+                height={24}
+              />
+            }
+            arial-label="More on Flickr"
           >
             More on
           </Button>

@@ -32,7 +32,7 @@ export default function MainMenu() {
 const navLinks = [
   { href: '/home', label: 'Home' },
   { href: '/bio', label: 'Biography' },
-  { href: '/dates', label: 'Tour Dates' },
+  { href: '/dates', label: 'Live Dates' },
   { href: '/media', label: 'Media' },
   { href: '/contacts', label: 'Contacts' },
 ];
