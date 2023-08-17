@@ -5,6 +5,7 @@ import Background from '@/components/layout/Background';
 import Footer from '@/components/layout/Footer';
 import MainMenu from '@/components/layout/MainMenu';
 import MainLogo from '@/components/layout/MainLogo';
+import Marker from '@/components/layout/Marker';
 
 import '@/styles/globals.scss';
 import styles from './layout.module.scss';
@@ -26,7 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Background />
-        <div className={clsx(styles.wrapper, 'container')}>
+        <Marker />
+        <div className={clsx(styles.container, 'container')}>
           <header>
             <MainLogo />
             <MainMenu />
