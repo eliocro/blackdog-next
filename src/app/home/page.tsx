@@ -3,10 +3,12 @@ import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getPage from '@/utils/contentful/getPage';
+import getEvents from '@/utils/contentful/getEvents';
 
 import Button from '@/components/Button';
 import FlickrGallery from '@/components/FlickrGallery';
 import CloseButton from '@/components/layout/CloseButton';
+import EventList from '@/components/EventList';
 
 import styles from './page.module.scss';
 
@@ -16,6 +18,8 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const page = await getPage('home');
+  const events = await getEvents(4);
+
   return (
     <main>
       <CloseButton />
@@ -37,6 +41,7 @@ export default async function HomePage() {
             </div>
             <div>
               <h2>Next Dates</h2>
+              <EventList items={events} narrow />
               <Button href="/dates">More dates</Button>
             </div>
           </div>

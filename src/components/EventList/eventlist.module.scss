@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  li + li {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+  h3 {
+    margin: 0;
+    span {
+      display: inline-block;
+      &:nth-child(2) {
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    h3 span {
+      display: block;
+    }
+  }
+
+  time {
+    display: block;
+  }
+
+  div {
+    margin-top: 0.5em;
+  }
+}
+
+.narrow {
+  h3 {
+    font-size: 1rem;
+    span {
+      display: block;
+    }
+  }
+
+  div {
+    display: none;
+    // font-size: 0.875rem;
+  }
+}
