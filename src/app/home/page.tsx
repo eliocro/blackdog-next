@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const page = await getPage('home');
-  const events = await getEvents(4);
+  const { items } = await getEvents(4);
 
   return (
     <main>
@@ -41,7 +41,7 @@ export default async function HomePage() {
             </div>
             <div>
               <h2>Next Dates</h2>
-              <EventList items={events} narrow />
+              <EventList items={items} narrow />
               <Button href="/dates">More dates</Button>
             </div>
           </div>

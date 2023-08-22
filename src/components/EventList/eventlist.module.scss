@@ -1,7 +1,8 @@
 .list {
   list-style: none;
+  margin-bottom: 0.75rem;
   &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   li + li {

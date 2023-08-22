@@ -17,7 +17,12 @@ export default async function getEvents(limit = 1, skip = 0) {
     limit,
     skip,
   });
-  return events.items.map((item: any) => item.fields) as Event[];
+
+  const { items, total } = events;
+  return {
+    items: items.map((item: any) => item.fields) as Event[],
+    count: total as number,
+  };
 }
 
 const getTodayDate = () => {
@@ -27,4 +32,4 @@ const getTodayDate = () => {
   ts.setSeconds(0);
   ts.setMilliseconds(0);
   return ts.toISOString();
-}
+};
