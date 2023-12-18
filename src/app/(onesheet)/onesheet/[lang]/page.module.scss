@@ -1,0 +1,24 @@
+.logo {
+  display: block;
+  margin-bottom: 1rem;
+  width: 250px;
+  height: auto;
+}
+
+.image {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  margin: 2rem 0;
+  button {
+    margin: 0 auto;
+  }
+
+  @media print {
+    display: none;
+  }
+}
