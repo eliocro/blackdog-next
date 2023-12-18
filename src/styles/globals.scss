@@ -21,6 +21,7 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 body {
@@ -69,5 +70,15 @@ p {
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media print {
+  body {
+    overflow: visible !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
   }
 }

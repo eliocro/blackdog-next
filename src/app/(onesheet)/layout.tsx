@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import clsx from 'clsx';
 
 import '@/styles/globals.scss';
 import styles from './layout.module.scss';
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={styles.container}>{children}</div>
+        <div className={clsx(styles.container, 'container')}>{children}</div>
       </body>
     </html>
   );

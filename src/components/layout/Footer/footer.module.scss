@@ -12,12 +12,16 @@
   color: var(--color-white);
   background-color: rgba(0, 0, 0, 0.67);
 
-  :global(.container) {
-    @include breakpoints.tablet {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  @media print {
+    display: none;
+  }
+}
+
+.container {
+  @include breakpoints.tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

@@ -23,4 +23,8 @@
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  @media print {
+    display: none;
+  }
 }

@@ -1,13 +1,13 @@
-.logo {
+.logo,
+.image {
   display: block;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+}
+.logo {
   width: 250px;
   height: auto;
 }
-
 .image {
-  display: block;
-  margin-bottom: 1rem;
   width: 100%;
   height: auto;
 }
