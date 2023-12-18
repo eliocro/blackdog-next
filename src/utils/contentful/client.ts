@@ -22,9 +22,16 @@ async function getEntries(query: ParsedUrlQueryInput) {
   return res.json();
 }
 
+async function getAsset(id: string) {
+  const url = buildURL(`/assets/${id}`);
+  const res = await fetch(url, { next: { revalidate: 3600 } });
+  return res.json();
+}
+
 const client = {
   getEntry,
   getEntries,
+  getAsset,
 };
 
 export default client;
