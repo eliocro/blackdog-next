@@ -32,11 +32,11 @@ export default async function BioPage() {
         {documentToReactComponents(page.body)}
 
         <h2>1-Sheet</h2>
-        <Link className={styles.sheet} href="/images/1sheet_en.jpg">
+        <Link className={styles.sheet} href="/one-sheet/en">
           <Image width={100} height={130} src="/images/1sheet.jpg" alt="" />
           English
         </Link>
-        <Link className={styles.sheet} href="/images/1sheet_pt.jpg">
+        <Link className={styles.sheet} href="/one-sheet/pt">
           <Image width={100} height={130} src="/images/1sheet.jpg" alt="" />
           Português
         </Link>

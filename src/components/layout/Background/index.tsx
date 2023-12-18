@@ -9,7 +9,7 @@ export default function Background() {
     (Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % NUM_IMAGES) + 1;
   return (
     <div
-      className={styles.container}
+      className={styles.background}
       style={{ backgroundImage: `url(/images/insta-${idx}.jpg)` }}
     ></div>
   );

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 import styles from './footer.module.scss';
 
@@ -7,7 +8,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className={clsx(styles.container, 'container')}>
         <div className={styles.social}>
           {socialLinks.map(item => (
             <Link key={item.name} href={item.href} target="_blank">
