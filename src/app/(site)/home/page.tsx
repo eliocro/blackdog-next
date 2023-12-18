@@ -7,7 +7,7 @@ import getEvents from '@/utils/contentful/getEvents';
 
 import Button from '@/components/Button';
 import FlickrGallery from '@/components/FlickrGallery';
-import CloseButton from '@/components/layout/CloseButton';
+import CloseButton from '@/components/CloseButton';
 import EventList from '@/components/EventList';
 
 import styles from './page.module.scss';

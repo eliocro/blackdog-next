@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getPage from '@/utils/contentful/getPage';
-import CloseButton from '@/components/layout/CloseButton';
+import CloseButton from '@/components/CloseButton';
 
 import styles from './page.module.scss';
 
