@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import CloseButton from '@/components/layout/CloseButton';
+import CloseButton from '@/components/CloseButton';
 import FlickrGallery from '@/components/FlickrGallery';
 import Button from '@/components/Button';
 

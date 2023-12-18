@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import clsx from 'clsx';
 
-import Background from '@/components/layout/Background';
-import Footer from '@/components/layout/Footer';
-import MainMenu from '@/components/layout/MainMenu';
-import MainLogo from '@/components/layout/MainLogo';
-import PathMarker from '@/components/layout/PathMarker';
+import Background from '@/components/Background';
+import Footer from '@/components/Footer';
+import MainMenu from '@/components/MainMenu';
+import MainLogo from '@/components/MainLogo';
+import PathMarker from '@/components/PathMarker';
 
 import '@/styles/globals.scss';
 import styles from './layout.module.scss';

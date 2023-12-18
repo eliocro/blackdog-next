@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import getEvents from '@/utils/contentful/getEvents';
 
-import CloseButton from '@/components/layout/CloseButton';
+import CloseButton from '@/components/CloseButton';
 import EventList from '@/components/EventList';
 import Pagination from '@/components/Pagination';
 
