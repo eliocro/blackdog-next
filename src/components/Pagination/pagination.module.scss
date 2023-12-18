@@ -1,0 +1,28 @@
+.pagination {
+  margin-top: 1.5rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+  }
+
+  a,
+  span {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-weight: 700;
+  }
+}

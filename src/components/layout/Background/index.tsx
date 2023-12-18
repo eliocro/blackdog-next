@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './background.module.scss';
 
 const NUM_IMAGES = 3;
