@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getOneSheet from '@/utils/contentful/getOneSheet';
-import PrintButton from '@/components/Button/PrintButton';
+import PrintButton from '@/components/PrintButton';
 import styles from './page.module.scss';
 
 type Props = {

@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '.';
+import Button from './Button';
 
 export default function PrintButton({ lang }: { lang?: string }) {
   return (
