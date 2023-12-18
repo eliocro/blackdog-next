@@ -35,6 +35,7 @@ export default async function HomePage() {
                 height={206}
                 quality={85}
                 alt=""
+                priority
               />
               {documentToReactComponents(page.body)}
               <Button href="/bio">Read more</Button>

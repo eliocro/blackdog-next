@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getPage from '@/utils/contentful/getPage';
 import CloseButton from '@/components/layout/CloseButton';
 
 import styles from './page.module.scss';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Biography',
@@ -27,6 +27,7 @@ export default async function BioPage() {
           height={320}
           quality={85}
           alt=""
+          priority
         />
         {documentToReactComponents(page.body)}
 
