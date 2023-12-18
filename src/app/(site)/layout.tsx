@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={styles.body}>
         <Background />
         <PathMarker />
         <div className={clsx(styles.container, 'container')}>
