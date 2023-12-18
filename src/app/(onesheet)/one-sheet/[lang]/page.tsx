@@ -31,16 +31,19 @@ export default async function OneSheet({ params: { lang } }: Props) {
 
   return (
     <>
-      <Link href="/">
-        <Image
-          className={styles.logo}
-          src="/images/logo-full.png"
-          width={341}
-          height={156}
-          alt=""
-          priority
-        />
-      </Link>
+      <header>
+        <Link href="/">
+          <Image
+            className={styles.logo}
+            src="/images/logo-full.png"
+            width={341}
+            height={156}
+            alt=""
+            priority
+          />
+          <h1 className="visually-hidden">Black Dog Blues Band</h1>
+        </Link>
+      </header>
       <section>{...paragraphs}</section>
       <footer className={styles.footer}>
         <PrintButton lang={lang} />
