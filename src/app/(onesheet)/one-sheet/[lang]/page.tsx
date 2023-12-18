@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getOneSheet from '@/utils/contentful/getOneSheet';
@@ -30,14 +31,16 @@ export default async function OneSheet({ params: { lang } }: Props) {
 
   return (
     <>
-      <Image
-        className={styles.logo}
-        src="/images/logo-full.png"
-        width={341}
-        height={156}
-        alt=""
-        priority
-      />
+      <Link href="/">
+        <Image
+          className={styles.logo}
+          src="/images/logo-full.png"
+          width={341}
+          height={156}
+          alt=""
+          priority
+        />
+      </Link>
       <section>{...paragraphs}</section>
       <footer className={styles.footer}>
         <PrintButton lang={lang} />
