@@ -16,7 +16,7 @@ export default async function OneSheet({ params: { lang } }: Props) {
   const content = documentToReactComponents(body);
 
   const img = image && (
-    <figure className={styles.image}>
+    <figure>
       <Image
         src={image.url.replace(/^\/\//, 'https://')}
         width={image.details.image.width}
@@ -25,7 +25,7 @@ export default async function OneSheet({ params: { lang } }: Props) {
         priority
       />
       <figcaption>
-        &copy; photo by{' '}
+        &copy; {PHOTO_BY[lang] || PHOTO_BY.en}{' '}
         <Link
           href="https://www.instagram.com/ne_prosto_lisa/"
           target="_blank"
@@ -62,3 +62,8 @@ export default async function OneSheet({ params: { lang } }: Props) {
     </>
   );
 }
+
+const PHOTO_BY = {
+  en: 'photo by',
+  pt: 'foto por',
+};

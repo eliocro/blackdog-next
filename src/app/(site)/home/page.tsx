@@ -30,7 +30,7 @@ export default async function HomePage() {
           <div className={styles.flex}>
             <div>
               <h2>Biography</h2>
-              <figure className={styles.image}>
+              <figure>
                 <Image
                   src="/images/insta-a.jpg"
                   width={327}
