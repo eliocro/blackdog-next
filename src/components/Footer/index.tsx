@@ -17,7 +17,7 @@ export default function Footer() {
           ))}
         </div>
         <div className={styles.copy}>
-          <span>&copy; 2016 - {year} Black Dog Blues Band</span>
+          <span>&copy; {year} Black Dog Blues Band</span>
         </div>
       </div>
     </footer>
