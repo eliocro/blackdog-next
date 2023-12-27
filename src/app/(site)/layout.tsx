@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import clsx from 'clsx';
 
-import Background from '@/components/Background';
 import Footer from '@/components/Footer';
 import MainMenu from '@/components/MainMenu';
 import MainLogo from '@/components/MainLogo';
@@ -9,6 +9,10 @@ import PathMarker from '@/components/PathMarker';
 
 import '@/styles/globals.scss';
 import styles from './layout.module.scss';
+
+const Background = dynamic(() => import('@/components/Background'), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: {
