@@ -16,7 +16,7 @@ export default async function OneSheet({ params: { lang } }: Props) {
   const content = documentToReactComponents(body);
 
   const img = image && (
-    <figure className={styles.image}>
+    <figure>
       <Image
         src={image.url.replace(/^\/\//, 'https://')}
         width={image.details.image.width}
