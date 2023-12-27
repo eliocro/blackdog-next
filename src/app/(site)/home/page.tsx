@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getPage from '@/utils/contentful/getPage';
@@ -29,14 +30,26 @@ export default async function HomePage() {
           <div className={styles.flex}>
             <div>
               <h2>Biography</h2>
-              <Image
-                src="/images/insta-a.jpg"
-                width={327}
-                height={206}
-                quality={85}
-                alt=""
-                priority
-              />
+              <figure className={styles.image}>
+                <Image
+                  src="/images/insta-a.jpg"
+                  width={327}
+                  height={206}
+                  quality={85}
+                  alt=""
+                  priority
+                />
+                <figcaption>
+                  &copy; photo by{' '}
+                  <Link
+                    href="https://www.instagram.com/ne_prosto_lisa/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @ne_prosto_lisa
+                  </Link>
+                </figcaption>
+              </figure>
               {documentToReactComponents(page.body)}
               <Button href="/bio">Read more</Button>
             </div>
