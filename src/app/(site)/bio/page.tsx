@@ -20,15 +20,26 @@ export default async function BioPage() {
       <CloseButton />
       <div>
         <h1>Biography</h1>
-        <Image
-          className={styles.image}
-          src="/images/insta-b.jpg"
-          width={256}
-          height={320}
-          quality={85}
-          alt=""
-          priority
-        />
+        <figure className={styles.image}>
+          <Image
+            src="/images/insta-b.jpg"
+            width={256}
+            height={320}
+            quality={85}
+            alt=""
+            priority
+          />
+          <figcaption>
+            &copy; photo by{' '}
+            <Link
+              href="https://www.instagram.com/barreirinhabarcafe/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @barreirinhabarcafe
+            </Link>
+          </figcaption>
+        </figure>
         {documentToReactComponents(page.body)}
 
         <h2>1-Sheet</h2>

@@ -39,14 +39,25 @@
   a,
   img {
     display: block;
+    border-radius: 50%;
   }
 }
 
 .copy {
-  @include breakpoints.mobile {
-    text-align: center;
+  text-align: center;
+  @include breakpoints.tablet {
+    text-align: right;
   }
 
-  font-size: 0.875rem;
-  text-transform: uppercase;
+  span {
+    display: block;
+
+    &:nth-child(1) {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+    &:nth-child(2) {
+      font-size: 0.75rem;
+    }
+  }
 }
