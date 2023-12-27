@@ -11,13 +11,28 @@ export default function Footer() {
       <div className={clsx(styles.container, 'container')}>
         <div className={styles.social}>
           {socialLinks.map(item => (
-            <Link key={item.name} href={item.href} target="_blank">
+            <Link
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image width={36} height={36} src={item.src} alt={item.name} />
             </Link>
           ))}
         </div>
         <div className={styles.copy}>
           <span>&copy; {year} Black Dog Blues Band</span>
+          <span>
+            &copy; photo by{' '}
+            <Link
+              href="https://www.instagram.com/oscar_silva95"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @oscar_silva95
+            </Link>
+          </span>
         </div>
       </div>
     </footer>
