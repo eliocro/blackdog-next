@@ -26,7 +26,7 @@ export default function Footer() {
           <span>
             &copy; photo by{' '}
             <Link
-              href="https://www.instagram.com/oscar_silva95"
+              href="https://www.instagram.com/oscar_silva95/"
               target="_blank"
               rel="noreferrer"
             >
@@ -42,7 +42,7 @@ export default function Footer() {
 const socialLinks = [
   {
     name: 'instagram',
-    href: 'https://www.instagram.com/blackdog.bluesband',
+    href: 'https://www.instagram.com/blackdog.bluesband/',
     src: '/images/social/instagram.svg',
   },
   {

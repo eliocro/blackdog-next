@@ -16,14 +16,25 @@ export default async function OneSheet({ params: { lang } }: Props) {
   const content = documentToReactComponents(body);
 
   const img = image && (
-    <Image
-      className={styles.image}
-      src={image.url.replace(/^\/\//, 'https://')}
-      width={image.details.image.width}
-      height={image.details.image.height}
-      alt=""
-      priority
-    />
+    <figure className={styles.image}>
+      <Image
+        src={image.url.replace(/^\/\//, 'https://')}
+        width={image.details.image.width}
+        height={image.details.image.height}
+        alt=""
+        priority
+      />
+      <figcaption>
+        &copy; photo by{' '}
+        <Link
+          href="https://www.instagram.com/ne_prosto_lisa/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @ne_prosto_lisa
+        </Link>
+      </figcaption>
+    </figure>
   );
 
   const contentArray = Array.from(content as Iterable<ReactNode>);
