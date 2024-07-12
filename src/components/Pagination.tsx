@@ -1,31 +1,22 @@
 'use client';
 
-import { MouseEvent, useMemo } from 'react';
-
-import styles from './pagination.module.scss';
+import { useMemo } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 type Props = {
   page?: number;
   limit?: number;
   count?: number;
-  onChange?: (p: number) => void;
 };
 
-export default function Pagination({
-  page = 1,
-  limit = 1,
-  count = 1,
-  onChange,
-}: Props) {
+export default function Pagination({ page = 1, limit = 1, count = 1 }: Props) {
   const numPages = Math.ceil(count / limit);
   const pageList = useMemo(() => paginate(page, numPages), [page, numPages]);
 
   if (pageList.length === 1) return null;
 
   return (
-    <nav className={styles.pagination}>
+    <nav className="pagination">
       <ul>
         {page > 1 && (
           <li>
