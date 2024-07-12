@@ -95,6 +95,10 @@ figure {
   }
 }
 
+@import './layout/main-menu.scss';
+@import './layout/main-logo.scss';
+@import './layout/background.scss';
+
 @import './modules/button.scss';
 @import './modules/close-button.scss';
 @import './modules/event-list.scss';
