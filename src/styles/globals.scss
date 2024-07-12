@@ -1,6 +1,5 @@
-@use './breakpoints.scss' as breakpoints;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './breakpoints.scss';
+@import './base/fonts.scss';
 
 :root {
   --color-black: #191919;
@@ -9,8 +8,8 @@
 
   --font: 'Inter', Arial, sans-serif;
 
-  --break-tablet: breakpoints.$break-tablet;
-  --break-desktop: breakpoints.$break-desktop;
+  --break-tablet: $break-tablet;
+  --break-desktop: $break-desktop;
 }
 
 * {
@@ -76,8 +75,8 @@ figure {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
-  @include breakpoints.desktop {
-    max-width: calc(breakpoints.$break-desktop - 3rem);
+  @include desktop {
+    max-width: calc($break-desktop - 3rem);
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
