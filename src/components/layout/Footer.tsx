@@ -2,14 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import styles from './footer.module.scss';
-
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className={styles.footer}>
-      <div className={clsx(styles.container, 'container')}>
-        <div className={styles.social}>
+    <footer className="site-footer">
+      <div className="container">
+        <div className="social">
           {socialLinks.map(item => (
             <Link
               key={item.name}
@@ -21,7 +19,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <div className={styles.copy}>
+        <div className="copy">
           <span>&copy; {year} Black Dog Blues Band</span>
           <span>
             &copy; photo by{' '}

@@ -94,8 +94,9 @@ figure {
   }
 }
 
-@import './layout/main-menu.scss';
 @import './layout/main-logo.scss';
+@import './layout/main-menu.scss';
+@import './layout/footer.scss';
 @import './layout/background.scss';
 
 @import './modules/button.scss';
