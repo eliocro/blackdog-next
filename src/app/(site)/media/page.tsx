@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 import CloseButton from '@/components/CloseButton';
+import LinkButton from '@/components/LinkButton';
 import FlickrGallery from '@/components/FlickrGallery';
-import Button from '@/components/Button';
 
 import styles from './page.module.scss';
 
@@ -35,7 +35,7 @@ function Videos() {
         style={{ border: 0 }}
         src="https://www.youtube.com/embed/videoseries?list=PLllUBl2D4n6urUmnCCWAJYc-VXTmOUdYK"
       />
-      <Button
+      <LinkButton
         href="https://www.youtube.com/user/blackdogbluesband/"
         target="_blank"
         endIcon={
@@ -49,7 +49,7 @@ function Videos() {
         arial-label="More on Youtube"
       >
         More on
-      </Button>
+      </LinkButton>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function Music() {
         style={{ border: 0 }}
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/94636391&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       ></iframe>
-      <Button
+      <LinkButton
         href="https://www.soundcloud.com/blackdogbluesband"
         target="_blank"
         endIcon={
@@ -78,7 +78,7 @@ function Music() {
         arial-label="More on Soundcloud"
       >
         More on
-      </Button>
+      </LinkButton>
     </div>
   );
 }
@@ -88,7 +88,7 @@ function Photos() {
     <div className={styles.block}>
       <h2>Photos</h2>
       <FlickrGallery count={15} />
-      <Button
+      <LinkButton
         href="https://www.flickr.com/photos/84277882@N05/"
         target="_blank"
         endIcon={
@@ -102,7 +102,7 @@ function Photos() {
         arial-label="More on Flickr"
       >
         More on
-      </Button>
+      </LinkButton>
     </div>
   );
 }
