@@ -1,0 +1,9 @@
+@media print {
+  body {
+    overflow: visible !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
+  }
+}
