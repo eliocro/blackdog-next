@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import getPage from '@/utils/contentful/getPage';
-import getEvents from '@/utils/contentful/getEvents';
+import getCalendarEvents from '@/utils/getCalendarEvents';
 
 import Button from '@/components/Button';
 import FlickrGallery from '@/components/FlickrGallery';
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const page = await getPage('home');
-  const { items } = await getEvents(4);
+  const { events } = await getCalendarEvents(4);
 
   return (
     <main>
@@ -55,7 +55,7 @@ export default async function HomePage() {
             </div>
             <div>
               <h2>Next Dates</h2>
-              <EventList items={items} narrow />
+              <EventList items={events} narrow />
               <Button href="/dates">More dates</Button>
             </div>
           </div>
