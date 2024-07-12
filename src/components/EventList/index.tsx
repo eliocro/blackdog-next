@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import type { Event } from '@/utils/contentful/getEvents';
+import type { Event } from '@/utils/getCalendarEvents';
 
 import styles from './eventlist.module.scss';
 
@@ -14,17 +13,13 @@ export default function EventList({ items, narrow }: Props) {
     <ul className={clsx(styles.list, { [styles.narrow]: narrow })}>
       {items.map((item, idx) => (
         <li key={idx}>
-          <h3>
-            <span>{item.title}</span>{' '}
-            <span>
-              {'//'} {item.location}
-            </span>
-          </h3>
-          <time dateTime={item.date}>
-            {new Date(item.date).toLocaleString('en-GB', DATE_FORMAT)}
+          <h3>{item.summary}</h3>
+          {item.location && <address>{item.location}</address>}
+          <time dateTime={item.start?.toISOString()}>
+            {item.start?.toLocaleString('en-GB', DATE_FORMAT)}
           </time>
-          {item.description && (
-            <div>{documentToReactComponents(item.description)}</div>
+          {item.description && !narrow && (
+            <div dangerouslySetInnerHTML={{ __html: item.description }} />
           )}
         </li>
       ))}
