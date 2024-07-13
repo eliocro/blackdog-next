@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import getPage from '@/utils/contentful/getPage';
 import getCalendarEvents from '@/utils/getCalendarEvents';
+import { getFlickrPhotos } from '@/utils/getFlickrPhotos';
 
 import LinkButton from '@/components/LinkButton';
 import FlickrGallery from '@/components/FlickrGallery';
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const page = await getPage('home');
   const { events } = await getCalendarEvents(4);
+  const photos = await getFlickrPhotos(10);
 
   return (
     <main>
@@ -58,7 +60,7 @@ export default async function HomePage() {
 
         <section>
           <h2>Latest Photos</h2>
-          <FlickrGallery count={10} />
+          <FlickrGallery items={photos} />
           <LinkButton href="/media">More media</LinkButton>
         </section>
       </div>

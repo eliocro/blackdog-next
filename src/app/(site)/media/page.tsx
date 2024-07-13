@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+import { getFlickrPhotos } from '@/utils/getFlickrPhotos';
+import FlickrGallery from '@/components/FlickrGallery';
 import CloseButton from '@/components/CloseButton';
 import LinkButton from '@/components/LinkButton';
-import FlickrGallery from '@/components/FlickrGallery';
 
 export const metadata: Metadata = {
   title: 'Media',
@@ -36,6 +37,7 @@ function Videos() {
       <LinkButton
         href="https://www.youtube.com/user/blackdogbluesband/"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/youtube.svg"
@@ -65,6 +67,7 @@ function Music() {
       <LinkButton
         href="https://www.soundcloud.com/blackdogbluesband"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/soundcloud.svg"
@@ -81,14 +84,16 @@ function Music() {
   );
 }
 
-function Photos() {
+async function Photos() {
+  const photos = await getFlickrPhotos(15);
   return (
     <section>
       <h2>Photos</h2>
-      <FlickrGallery count={15} />
+      <FlickrGallery items={photos} />
       <LinkButton
         href="https://www.flickr.com/photos/84277882@N05/"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/flickr.svg"

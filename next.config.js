@@ -2,12 +2,8 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        hostname: 'live.staticflickr.com',
-      },
-      {
-        hostname: 'images.ctfassets.net',
-      },
+      { hostname: 'live.staticflickr.com' },
+      { hostname: 'images.ctfassets.net' },
     ],
   },
 };
