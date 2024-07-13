@@ -26,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name='BUILD_DATE' content={new Date().toISOString()} />
+      </head>
       <body className="site-layout">
         <Background />
         <div className="container">

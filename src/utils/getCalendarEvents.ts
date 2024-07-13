@@ -10,7 +10,7 @@ export type Event = Pick<
 export default async function getCalendarEvents(limit = 1, skip = 0) {
   if (!CALENDAR_URL) return { count: 0, events: [] };
 
-  const res = await fetch(CALENDAR_URL);
+  const res = await fetch(CALENDAR_URL, { next: { revalidate: 3600 } });
   const icsData = await res.text();
 
   const data = ical.parseICS(icsData);
