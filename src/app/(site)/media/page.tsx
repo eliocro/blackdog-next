@@ -37,6 +37,7 @@ function Videos() {
       <LinkButton
         href="https://www.youtube.com/user/blackdogbluesband/"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/youtube.svg"
@@ -66,6 +67,7 @@ function Music() {
       <LinkButton
         href="https://www.soundcloud.com/blackdogbluesband"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/soundcloud.svg"
@@ -91,6 +93,7 @@ async function Photos() {
       <LinkButton
         href="https://www.flickr.com/photos/84277882@N05/"
         target="_blank"
+        rel="noreferrer"
         endIcon={
           <Image
             src="/images/social-button/flickr.svg"

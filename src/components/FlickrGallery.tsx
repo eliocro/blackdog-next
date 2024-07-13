@@ -11,8 +11,14 @@ export default function FlickrGallery({ items }: Props) {
   return (
     <div className="flickr-gallery">
       {items.map((item, idx) => (
-        <Link key={idx} href={item.link} title={item.title} target="_blank">
-          <Image src={item.src} width={120} height={90} alt={item.title} />
+        <Link
+          key={idx}
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={item.title}
+        >
+          <Image src={item.src} width={120} height={90} alt="" />
         </Link>
       ))}
     </div>
