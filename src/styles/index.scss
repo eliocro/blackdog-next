@@ -1,4 +1,4 @@
-@import './breakpoints.scss';
+@import './base/breakpoints.scss';
 @import './base/fonts.scss';
 
 @import './base/base.scss';
@@ -15,5 +15,10 @@
 @import './modules/flickr-gallery.scss';
 @import './modules/event-list.scss';
 @import './modules/pagination.scss';
+
+@import './pages/home.scss';
+@import './pages/bio.scss';
+@import './pages/media.scss';
+@import './pages/one-sheet.scss';
 
 @import './base/print.scss';

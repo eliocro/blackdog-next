@@ -2,6 +2,17 @@
   body {
     overflow: visible !important;
   }
+  main {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .one-sheet-page footer,
+  .bio-page footer,
+  .site-footer {
+    display: none;
+  }
+
   @page {
     size: A4 portrait;
     margin: 1cm;

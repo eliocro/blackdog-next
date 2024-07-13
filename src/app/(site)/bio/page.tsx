@@ -6,8 +6,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import getPage from '@/utils/contentful/getPage';
 import CloseButton from '@/components/CloseButton';
 
-import styles from './page.module.scss';
-
 export const metadata: Metadata = {
   title: 'Biography',
 };
@@ -18,9 +16,9 @@ export default async function BioPage() {
   return (
     <main>
       <CloseButton />
-      <div>
+      <div className="bio-page">
         <h1>Biography</h1>
-        <figure className={styles.image}>
+        <figure>
           <Image
             src="/images/insta-b.jpg"
             width={256}
@@ -42,15 +40,17 @@ export default async function BioPage() {
         </figure>
         {documentToReactComponents(page.body)}
 
-        <h2>1-Sheet</h2>
-        <Link className={styles.sheet} href="/one-sheet/en">
-          <Image width={100} height={130} src="/images/1sheet.jpg" alt="" />
-          English
-        </Link>
-        <Link className={styles.sheet} href="/one-sheet/pt">
-          <Image width={100} height={130} src="/images/1sheet.jpg" alt="" />
-          Português
-        </Link>
+        <footer>
+          <h2>1-Sheet</h2>
+          <Link href="/one-sheet/en">
+            <Image src="/images/1sheet.jpg" width={100} height={130} alt="" />
+            English
+          </Link>
+          <Link href="/one-sheet/pt">
+            <Image src="/images/1sheet.jpg" width={100} height={130} alt="" />
+            Português
+          </Link>
+        </footer>
       </div>
     </main>
   );

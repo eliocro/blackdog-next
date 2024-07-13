@@ -1,12 +1,10 @@
-@use '@/styles/breakpoints.scss' as breakpoints;
-
 .main-logo {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1rem;
 
-  @include breakpoints.wide {
+  @include wide {
     flex-direction: row;
     margin-left: calc(-156px - 1rem);
     margin-bottom: calc(156px + 2rem);
@@ -22,9 +20,5 @@
     font-family: Verdana, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-  }
-
-  @media print {
-    display: none;
   }
 }

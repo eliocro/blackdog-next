@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
-import clsx from 'clsx';
 
 import '@/styles/index.scss';
-import styles from './layout.module.scss';
 
 export const metadata: Metadata = {
   title: {
@@ -19,9 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className={clsx(styles.container, 'container')}>{children}</div>
-      </body>
+      <body className="onesheet-layout">{children}</body>
     </html>
   );
 }

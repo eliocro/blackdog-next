@@ -1,14 +1,12 @@
-import clsx from 'clsx';
 import type { Event } from '@/utils/getCalendarEvents';
 
 type Props = {
   items: Event[];
-  narrow?: boolean;
 };
 
-export default function EventList({ items, narrow }: Props) {
+export default function EventList({ items }: Props) {
   return (
-    <ul className={clsx('event-list', { 'event-list--narrow': narrow })}>
+    <ul className="event-list">
       {items.map((item, idx) => (
         <li key={idx}>
           <h3>{item.summary}</h3>
@@ -16,7 +14,7 @@ export default function EventList({ items, narrow }: Props) {
           <time dateTime={item.start?.toISOString()}>
             {item.start?.toLocaleString('en-GB', DATE_FORMAT)}
           </time>
-          {item.description && !narrow && (
+          {item.description && (
             <div dangerouslySetInnerHTML={{ __html: item.description }} />
           )}
         </li>

@@ -14,6 +14,12 @@ $break-wide: 1400px;
   }
 }
 
+@mixin narrow {
+  @media screen and (max-width: ($break-desktop - 1px)) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: $break-desktop) {
     @content;

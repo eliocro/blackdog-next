@@ -1,0 +1,23 @@
+.one-sheet-page {
+  header {
+    a,
+    img {
+      display: block;
+    }
+    a {
+      margin: 1rem 0;
+      width: fit-content;
+    }
+    img {
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  footer {
+    padding: 2rem 0;
+    .button {
+      margin: 0 auto;
+    }
+  }
+}

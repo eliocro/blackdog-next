@@ -4,10 +4,53 @@
   padding-right: 1.5rem;
 
   @include desktop {
-    max-width: calc($break-desktop - 3rem);
+    max-width: calc(var(--break-desktop) - 3rem);
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.site-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+
+  color: var(--color-black);
+  background: var(--background-gradient);
+
+  > .container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 250px auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @include mobile {
+      grid-template-columns: 250px calc(100dvw - 3rem);
+      transition: margin-left 0.5s ease-in-out;
+
+      &:has(main) {
+        margin-left: -250px;
+      }
+    }
+
+    main {
+      position: relative;
+      padding: 1.5rem;
+      background-color: var(--transparent-white);
+
+      @include narrow {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.onesheet-layout {
+  > .container {
+    max-width: 670px;
   }
 }

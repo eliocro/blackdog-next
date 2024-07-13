@@ -8,11 +8,7 @@
   }
 
   color: var(--color-white);
-  background-color: rgba(0, 0, 0, 0.67);
-
-  @media print {
-    display: none;
-  }
+  background-color: var(--transparent-black);
 
   .container {
     @include tablet {
