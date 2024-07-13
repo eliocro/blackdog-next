@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import clsx from 'clsx';
 
-import '@/styles/globals.scss';
+import '@/styles/index.scss';
 import styles from './layout.module.scss';
 
 export const metadata: Metadata = {

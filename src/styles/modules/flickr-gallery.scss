@@ -1,15 +1,13 @@
-@use '@/styles/breakpoints.scss' as breakpoints;
-
-.gallery {
+.flickr-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
 
-  @include breakpoints.tablet {
+  @include tablet {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
   }
-  @include breakpoints.desktop {
+  @include desktop {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 

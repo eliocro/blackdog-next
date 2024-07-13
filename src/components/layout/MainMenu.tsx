@@ -2,14 +2,12 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-
-import styles from './mainmenu.module.scss';
 import clsx from 'clsx';
 
 export default function MainMenu() {
   const pathname = usePathname();
   return (
-    <nav className={styles.menu}>
+    <nav className="main-menu">
       <ul>
         {navLinks.map((item, idx) => {
           const isActive = pathname.startsWith(item.href);

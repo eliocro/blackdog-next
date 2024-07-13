@@ -1,4 +1,4 @@
-.list {
+.event-list {
   list-style: none;
   margin-bottom: 1.5rem;
 
@@ -11,6 +11,9 @@
   h3 {
     margin: 0;
   }
+  &--narrow h3 {
+    font-size: 1rem;
+  }
 
   address {
     display: block;
@@ -21,7 +24,7 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     h3,
     address {
       display: inline-block;
@@ -32,15 +35,10 @@
   time {
     display: block;
     margin-top: 0.125rem;
+    font-weight: 500;
   }
 
   div {
     margin-top: 0.5em;
-  }
-}
-
-.narrow {
-  h3 {
-    font-size: 1rem;
   }
 }

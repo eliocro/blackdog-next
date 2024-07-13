@@ -6,7 +6,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import getPage from '@/utils/contentful/getPage';
 import getCalendarEvents from '@/utils/getCalendarEvents';
 
-import Button from '@/components/Button';
+import LinkButton from '@/components/LinkButton';
 import FlickrGallery from '@/components/FlickrGallery';
 import CloseButton from '@/components/CloseButton';
 import EventList from '@/components/EventList';
@@ -51,19 +51,19 @@ export default async function HomePage() {
                 </figcaption>
               </figure>
               {documentToReactComponents(page.body)}
-              <Button href="/bio">Read more</Button>
+              <LinkButton href="/bio">Read more</LinkButton>
             </div>
             <div>
               <h2>Next Dates</h2>
               <EventList items={events} narrow />
-              <Button href="/dates">More dates</Button>
+              <LinkButton href="/dates">More dates</LinkButton>
             </div>
           </div>
         </div>
         <div className={styles.block}>
           <h2>Latest Photos</h2>
           <FlickrGallery count={10} />
-          <Button href="/media">More media</Button>
+          <LinkButton href="/media">More media</LinkButton>
         </div>
       </div>
     </main>

@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import type { Event } from '@/utils/getCalendarEvents';
 
-import styles from './eventlist.module.scss';
-
 type Props = {
   items: Event[];
   narrow?: boolean;
@@ -10,7 +8,7 @@ type Props = {
 
 export default function EventList({ items, narrow }: Props) {
   return (
-    <ul className={clsx(styles.list, { [styles.narrow]: narrow })}>
+    <ul className={clsx('event-list', { 'event-list--narrow': narrow })}>
       {items.map((item, idx) => (
         <li key={idx}>
           <h3>{item.summary}</h3>
