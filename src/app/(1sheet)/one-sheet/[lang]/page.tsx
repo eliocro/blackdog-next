@@ -5,7 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import getOneSheet from '@/utils/contentful/getOneSheet';
 import PrintButton from '@/components/PrintButton';
-import styles from './page.module.scss';
 
 type Props = {
   params: { lang: 'en' | 'pt' };
@@ -25,7 +24,7 @@ export default async function OneSheet({ params: { lang } }: Props) {
         priority
       />
       <figcaption>
-        &copy; {PHOTO_BY[lang] || PHOTO_BY.en}{' '}
+        &copy; {PHOTO_BY[lang]}{' '}
         <Link
           href="https://www.instagram.com/ne_prosto_lisa/"
           target="_blank"
@@ -41,11 +40,10 @@ export default async function OneSheet({ params: { lang } }: Props) {
   const paragraphs = img ? contentArray.toSpliced(1, 0, img) : contentArray;
 
   return (
-    <>
+    <div className="container one-sheet-page">
       <header>
         <Link href="/">
           <Image
-            className={styles.logo}
             src="/images/logo-full.png"
             width={341}
             height={156}
@@ -56,10 +54,10 @@ export default async function OneSheet({ params: { lang } }: Props) {
         </Link>
       </header>
       <section>{...paragraphs}</section>
-      <footer className={styles.footer}>
+      <footer>
         <PrintButton lang={lang} />
       </footer>
-    </>
+    </div>
   );
 }
 

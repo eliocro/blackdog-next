@@ -17,9 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="onesheet-layout">
-        <div className="container">{children}</div>
-      </body>
+      <body className="onesheet-layout">{children}</body>
     </html>
   );
 }
