@@ -10,10 +10,6 @@
   color: var(--color-white);
   background-color: var(--transparent-black);
 
-  @media print {
-    display: none;
-  }
-
   .container {
     @include tablet {
       display: flex;
