@@ -1,12 +1,22 @@
 :root {
   --color-black: #191919;
   --color-white: #f0f0f0;
-  --color-gray-light: #ccc;
+  --color-border: #a5a5a5;
 
-  --font: 'Inter', Arial, sans-serif;
+  --transparent-white: rgb(250 250 250 / 0.95);
+  --transparent-black: rgb(0 0 0 / 0.67);
 
-  --break-tablet: $break-tablet;
-  --break-desktop: $break-desktop;
+  --background-gradient: linear-gradient(
+    109.6deg,
+    rgb(193, 98, 253) 11.2%,
+    rgb(0, 49, 165) 91.1%
+  );
+
+  --font-family: 'Inter', Arial, sans-serif;
+
+  --break-tablet: #{$break-tablet};
+  --break-desktop: #{$break-desktop};
+  --break-wide: #{$break-desktop};
 }
 
 * {
@@ -22,7 +32,7 @@ html {
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font-family);
   line-height: 1.3;
 }
 

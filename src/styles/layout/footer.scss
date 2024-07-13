@@ -8,7 +8,7 @@
   }
 
   color: var(--color-white);
-  background-color: rgba(0, 0, 0, 0.67);
+  background-color: var(--transparent-black);
 
   @media print {
     display: none;

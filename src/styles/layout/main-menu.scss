@@ -16,7 +16,6 @@
     width: fit-content;
     padding: 0.75rem 3rem 0.75rem 1.25rem;
 
-    // border: 1px solid var(--color-black);
     color: var(--color-white);
     background-color: var(--color-black);
 
@@ -25,7 +24,7 @@
     font-weight: 700;
     text-transform: uppercase;
 
-    &:global(.is-active),
+    &.is-active,
     &:hover,
     &:focus-visible {
       color: var(--color-black);
