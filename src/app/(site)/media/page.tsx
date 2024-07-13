@@ -5,8 +5,6 @@ import CloseButton from '@/components/CloseButton';
 import LinkButton from '@/components/LinkButton';
 import FlickrGallery from '@/components/FlickrGallery';
 
-import styles from './page.module.scss';
-
 export const metadata: Metadata = {
   title: 'Media',
 };
@@ -15,7 +13,7 @@ export default function MediaPage() {
   return (
     <main>
       <CloseButton />
-      <div>
+      <div className="media-page">
         <h1 className="visually-hidden">Media</h1>
         <Videos />
         <Music />
@@ -27,7 +25,7 @@ export default function MediaPage() {
 
 function Videos() {
   return (
-    <div className={styles.block}>
+    <section>
       <h2>Videos</h2>
       <iframe
         width="100%"
@@ -50,13 +48,13 @@ function Videos() {
       >
         More on
       </LinkButton>
-    </div>
+    </section>
   );
 }
 
 function Music() {
   return (
-    <div className={styles.block}>
+    <section>
       <h2>Music</h2>
       <iframe
         width="100%"
@@ -79,13 +77,13 @@ function Music() {
       >
         More on
       </LinkButton>
-    </div>
+    </section>
   );
 }
 
 function Photos() {
   return (
-    <div className={styles.block}>
+    <section>
       <h2>Photos</h2>
       <FlickrGallery count={15} />
       <LinkButton
@@ -103,6 +101,6 @@ function Photos() {
       >
         More on
       </LinkButton>
-    </div>
+    </section>
   );
 }
