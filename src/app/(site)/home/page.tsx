@@ -52,7 +52,7 @@ export default async function HomePage() {
 
         <section>
           <h2>Next Dates</h2>
-          <EventList items={events} narrow />
+          <EventList items={events} />
           <LinkButton href="/dates">More dates</LinkButton>
         </section>
 

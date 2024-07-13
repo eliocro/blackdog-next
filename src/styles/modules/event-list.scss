@@ -8,37 +8,39 @@
     border-top: 1px solid #ccc;
   }
 
-  h3 {
-    margin: 0;
-  }
-  &--narrow h3 {
-    font-size: 1rem;
-  }
-
+  h3,
   address {
-    display: block;
-    margin-top: 0.125rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    .home-page & {
+      display: block;
+      margin-right: 0;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .home-page & {
+      font-size: 1rem;
+    }
+  }
+  address {
     font-style: normal;
     &::before {
       content: '// ';
     }
   }
-
-  @include desktop {
-    h3,
-    address {
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
-  }
-
   time {
     display: block;
-    margin-top: 0.125rem;
+    margin-top: 0.25rem;
     font-weight: 500;
   }
-
   div {
     margin-top: 0.5em;
+    .home-page & {
+      display: none;
+    }
   }
 }
