@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+import { getFlickrPhotos } from '@/utils/getFlickrPhotos';
+import FlickrGallery from '@/components/FlickrGallery';
 import CloseButton from '@/components/CloseButton';
 import LinkButton from '@/components/LinkButton';
-import FlickrGallery from '@/components/FlickrGallery';
 
 export const metadata: Metadata = {
   title: 'Media',
@@ -81,11 +82,12 @@ function Music() {
   );
 }
 
-function Photos() {
+async function Photos() {
+  const photos = await getFlickrPhotos(15);
   return (
     <section>
       <h2>Photos</h2>
-      <FlickrGallery count={15} />
+      <FlickrGallery items={photos} />
       <LinkButton
         href="https://www.flickr.com/photos/84277882@N05/"
         target="_blank"

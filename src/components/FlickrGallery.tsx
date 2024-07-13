@@ -1,21 +1,18 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
-import useFlickrPhotos from '@/hooks/useFlickrPhotos';
+import type { Photo } from '@/utils/getFlickrPhotos';
 
 type Props = {
-  count: number;
+  items: Photo[];
 };
 
-export default function FlickrGallery({ count }: Props) {
-  const { photos } = useFlickrPhotos();
+export default function FlickrGallery({ items }: Props) {
   return (
     <div className="flickr-gallery">
-      {photos.slice(0, count).map((photo, idx) => (
-        <Link key={idx} href={photo.href} title={photo.title} target="_blank">
-          <Image src={photo.src} width={120} height={90} alt={photo.title} />
+      {items.map((item, idx) => (
+        <Link key={idx} href={item.link} title={item.title} target="_blank">
+          <Image src={item.src} width={120} height={90} alt={item.title} />
         </Link>
       ))}
     </div>
