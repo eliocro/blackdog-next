@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
 import MainMenu from '@/components/layout/MainMenu';
 import MainLogo from '@/components/layout/MainLogo';
-import PathMarker from '@/components/layout/PathMarker';
 
 import '@/styles/index.scss';
 
@@ -29,7 +28,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="site-layout">
         <Background />
-        <PathMarker />
         <div className="container">
           <header className="site-header">
             <MainLogo />
