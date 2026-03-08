@@ -19,7 +19,7 @@ export default function OneSheetEN() {
             src="/images/insta-a.jpg"
             width={670}
             height={420}
-            quality={90}
+            quality={85}
             alt=""
             priority
           />

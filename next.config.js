@@ -5,6 +5,7 @@ const nextConfig = {
       { hostname: 'live.staticflickr.com' },
       { hostname: 'images.ctfassets.net' },
     ],
+    qualities: [75, 85],
   },
 };
 

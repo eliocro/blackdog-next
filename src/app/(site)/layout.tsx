@@ -1,15 +1,11 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 
 import Footer from '@/components/layout/Footer';
 import MainMenu from '@/components/layout/MainMenu';
 import MainLogo from '@/components/layout/MainLogo';
+import Background from '@/components/layout/Background';
 
 import '@/styles/index.scss';
-
-const Background = dynamic(() => import('@/components/layout/Background'), {
-  ssr: false,
-});
 
 export const metadata: Metadata = {
   title: {
