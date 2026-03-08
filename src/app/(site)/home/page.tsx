@@ -1,9 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import getPage from '@/utils/contentful/getPage';
 import getCalendarEvents from '@/utils/getCalendarEvents';
 import { getFlickrPhotos } from '@/utils/getFlickrPhotos';
 
@@ -17,7 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const page = await getPage('home');
   const { events } = await getCalendarEvents(4);
   const photos = await getFlickrPhotos(10);
 
@@ -48,7 +45,13 @@ export default async function HomePage() {
               </Link>
             </figcaption>
           </figure>
-          {documentToReactComponents(page.body)}
+          <p>
+            Black Dog Blues Band was born in Sao Paulo (Brazil) in 1989. Its
+            founder, Daniel Henriques, met Magic Slim, Albert Collins, Buddy
+            Guy, Etta James, Koko Taylor, Junior Wells, among many others who
+            participated in international festivals of Blues, in São Paulo and
+            the Nescafé & Blues...
+          </p>
           <LinkButton href="/bio">Read more</LinkButton>
         </section>
 

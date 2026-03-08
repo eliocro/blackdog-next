@@ -1,46 +1,39 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
-import CloseButton from '@/components/CloseButton';
+import PrintButton from '@/components/PrintButton';
 
-export const metadata: Metadata = {
-  title: 'Biography',
-};
-
-export default async function BioPage() {
+export default function OneSheetEN() {
   return (
-    <main>
-      <CloseButton />
-      <div className="bio-page">
-        <h1>Biography</h1>
+    <>
+      <section>
+        <p>
+          Black Dog Blues Band was born in Sao Paulo (Brazil) in 1989. Its
+          founder, Daniel Henriques, met Magic Slim, Albert Collins, Buddy Guy,
+          Etta James, Koko Taylor, Junior Wells, among many others who
+          participated in international festivals of blues in São Paulo and the
+          Nescafé & Blues.
+        </p>
         <figure>
           <Image
-            src="/images/insta-b.jpg"
-            width={256}
-            height={320}
-            quality={85}
+            src="/images/insta-a.jpg"
+            width={670}
+            height={420}
+            quality={90}
             alt=""
             priority
           />
           <figcaption>
             &copy; photo by{' '}
             <Link
-              href="https://www.instagram.com/barreirinhabarcafe/"
+              href="https://www.instagram.com/ne_prosto_lisa/"
               target="_blank"
               rel="noreferrer"
             >
-              @barreirinhabarcafe
+              @ne_prosto_lisa
             </Link>
           </figcaption>
         </figure>
-        <p>
-          Black Dog Blues Band was born in Sao Paulo (Brazil) in 1989. Its
-          founder, Daniel Henriques, met Magic Slim, Albert Collins, Buddy Guy,
-          Etta James, Koko Taylor, Junior Wells, among many others who
-          participated in international festivals of Blues, in São Paulo and the
-          Nescafé & Blues.
-        </p>
         <p>
           Originally from Madeira, Daniel Henriques returned to his homeland in
           January 2006 to resume the project, with roots on the Mississippi
@@ -61,21 +54,25 @@ export default async function BioPage() {
           Maria&quot; festival - opening for Carvin Jones on July 2012; the
           &quot;Vespas in the Park&quot; festival on July 2013; the Cotai Jazz
           and Blues Festival - Macau on October 2013; the NOS Summer Opening on
-          July 2015; Guarda Blues Festival on August 2016; and most recently,
-          the BB Blues Fest (Lisbon) on June 2017.
+          July 2015; and most recently, the &quot;Festival de Blues da
+          Guarda&quot; on August 2016.
         </p>
-        <footer>
-          <h2>1-Sheet</h2>
-          <Link href="/one-sheet/en">
-            <Image src="/images/1sheet.jpg" width={100} height={130} alt="" />
-            English
-          </Link>
-          <Link href="/one-sheet/pt">
-            <Image src="/images/1sheet.jpg" width={100} height={130} alt="" />
-            Português
-          </Link>
-        </footer>
-      </div>
-    </main>
+        <p>
+          Website:{' '}
+          <a href="https://www.blackdogbluesband.com">
+            www.blackdogbluesband.com
+          </a>
+        </p>
+        <p>
+          E-mail:{' '}
+          <a href="mailto:info@blackdogbluesband.com">
+            info@blackdogbluesband.com
+          </a>
+        </p>
+      </section>
+      <footer>
+        <PrintButton lang="en" />
+      </footer>
+    </>
   );
 }
