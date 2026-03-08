@@ -19,8 +19,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.19.0",
-    "@contentful/rich-text-types": "^16.3.0",
     "clsx": "^2.0.0",
     "ical": "^0.8.0",
     "next": "14.2.35",
