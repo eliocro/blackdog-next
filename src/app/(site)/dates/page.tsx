@@ -13,10 +13,12 @@ export const metadata: Metadata = {
 const LIMIT = 8;
 
 type Props = {
-  searchParams: Record<string, string>;
+  searchParams: Promise<Record<string, string>>;
 };
 
-export default async function DatesPage({ searchParams }: Props) {
+export default async function DatesPage(props: Props) {
+  const searchParams = await props.searchParams;
+
   const page = parseInt(searchParams.page) || 1;
   const skip = (page - 1) * LIMIT;
   const { count, events } = await getCalendarEvents(LIMIT, skip);
