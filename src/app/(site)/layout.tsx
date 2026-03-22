@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="manifest.json" />
         <meta name="BUILD_DATE" content={new Date().toISOString()} />
       </head>
       <body className="site-layout">
