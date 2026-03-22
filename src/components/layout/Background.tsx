@@ -1,6 +1,6 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import withNoSSR from '@/utils/withNoSSR';
 
 const NUM_IMAGES = 4;
 const INTERVAL = 1000 * 60 * 60 * 24; // 1 day
@@ -15,4 +15,4 @@ function Background() {
   );
 }
 
-export default dynamic(() => Promise.resolve(Background), { ssr: false });
+export default withNoSSR(Background);
